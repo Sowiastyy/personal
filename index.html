@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <title>sowiasty.dev</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    body {
+      font-family: system-ui, Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: #0f172a;
+      color: #e5e7eb;
+      margin: 0;
+    }
+
+    .box {
+      text-align: center;
+      padding: 2rem;
+      border-radius: 12px;
+      background: #020617;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+    }
+
+    button {
+      font-size: 1.2rem;
+      padding: 0.8rem 1.5rem;
+      border-radius: 8px;
+      border: none;
+      cursor: pointer;
+      background: #38bdf8;
+      color: #020617;
+    }
+
+    button:hover {
+      background: #0ea5e9;
+    }
+
+    .count {
+      font-size: 2.5rem;
+      margin: 1rem 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="box">
+    <h1>Kliker</h1>
+    <div class="count" id="count">0</div>
+    <button onclick="klik()">Kliknij mnie</button>
+  </div>
+
+  <script>
+    let licznik = 0;
+
+    function klik() {
+      licznik++;
+      document.getElementById("count").textContent = licznik;
+    }
+  </script>
+</body>
+</html>
